@@ -1,95 +1,71 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import instagramLogo from "../../public/Instagram-Logo-2016-present.png"
+import profilePicture from "../../public/picture.jpg"
+import Image from "next/image"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faHeart, faComment, faPaperPlane, faBookmark } from '@fortawesome/free-solid-svg-icons';
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>src/app/page.js</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
+    <>
+      <div className="nav">
+            <div className="nav-container">
+                <Image src={instagramLogo} alt="Instagram Logo"></Image>
+            </div>
         </div>
-      </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+
+        <div className="post-container">
+            <div className="profile-row">
+                <div className="profile-item information">
+                    <Image src={profilePicture} alt="Profile Picture"></Image>
+                    <a href="/profile"><p>connorruesch</p></a>
+                </div>
+                <div className="profile-item time-stamp">
+                    <p>2h</p>
+                </div>
+            </div>
+            <div className="image" style={{height: '500px', margin: '0'}}></div>
+            <div className="icons">
+                <div className="interact">
+                    <FontAwesomeIcon icon={faHeart} fixedWidth />
+                    <FontAwesomeIcon icon={faComment} fixedWidth />
+                    <FontAwesomeIcon icon={faPaperPlane} fixedWidth />
+                </div>
+                <div className="bookmark">
+                    <FontAwesomeIcon icon={faBookmark} fixedWidth />
+                </div>
+            </div>
+            <div className="post">
+                <p><a href="/profile"><span className="bold">connorruesch</span></a> The text for some special post will goes right here!</p>
+                <p className="comment">Add a comment...</p>
+            </div>
+        </div>
+
+        <div className="post-container">
+            <div className="profile-row">
+                <div className="profile-item information">
+                    <Image src={profilePicture} alt="Profile Picture"></Image>
+                    <a href="/profile"><p>connorruesch</p></a>
+                </div>
+                <div className="profile-item time-stamp">
+                    <p>2h</p>
+                </div>
+            </div>
+            <div className="image" style={{height: '500px', margin: '0'}}></div>
+            <div className="icons">
+                <div className="interact">
+                    <FontAwesomeIcon icon={faHeart} fixedWidth />
+                    <FontAwesomeIcon icon={faComment} fixedWidth />
+                    <FontAwesomeIcon icon={faPaperPlane} fixedWidth />
+                </div>
+                <div className="bookmark">
+                    <FontAwesomeIcon icon={faBookmark} fixedWidth />
+                </div>
+            </div>
+            <div className="post">
+                <p><a href="/profile"><span className="bold">connorruesch</span></a> Another different post will go right here!</p>
+                <p className="comment">Add a comment...</p>
+            </div>
+        </div>
+    </>
   );
 }
