@@ -12,9 +12,10 @@ export default function Home() {
             </div>
 
             {/* Moved to /src/components/Post.js */}
+            <Post image={"https://picsum.photos/seed/apple/200/300"} />
+            <Post image={"https://picsum.photos/seed/banana/200/300"} />
+            <Post image={"https://picsum.photos/seed/cherry/200/300"} />
             <Post />
-            <Post />
-
         </>
     );
 }

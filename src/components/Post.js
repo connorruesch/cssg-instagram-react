@@ -3,9 +3,9 @@ import { faHeart, faComment, faPaperPlane, faBookmark } from '@fortawesome/free-
 import profilePicture from "../../public/picture.jpg"
 import Image from "next/image"
 
-// A component! Any change you make here will be reflected on the page.
+// A component! Any change you make here will be reflected in each post on the homepage.
 
-export default function Post() {
+export default function Post({ image }) {
     return (
         <div className="post-container">
             <div className="profile-row">
@@ -17,7 +17,8 @@ export default function Post() {
                     <p>2h</p>
                 </div>
             </div>
-            <div className="image" style={{ height: '500px', margin: '0' }}></div>
+            {/* Using an Image component instead so the image isn't hardcoded */}
+            <Image src={image || "https://picsum.photos/200/300"} width={200} height={300} />
             <div className="icons">
                 <div className="interact">
                     <FontAwesomeIcon icon={faHeart} fixedWidth />
