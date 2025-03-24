@@ -4,6 +4,7 @@ import Image from "next/image"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart, faComment, faPaperPlane, faBookmark } from '@fortawesome/free-solid-svg-icons';
 
+// Adding a comment here as a test
 export default function Home() {
   return (
     <>
